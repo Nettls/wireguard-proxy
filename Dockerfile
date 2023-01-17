@@ -13,4 +13,4 @@ RUN udp-test
 
 FROM debian:buster-slim as runtime
 COPY --from=builder /usr/local/cargo/bin/wireguard-proxy  /usr/local/bin/
-CMD ["/usr/local/bin/wireguard-proxy"]
+ENTRYPOINT ["/usr/local/bin/wireguard-proxy"]
